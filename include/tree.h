@@ -3,6 +3,7 @@
 #define INCLUDE_TREE_H_
 #include <vector>
 #include <string>
+#include <algorithm>
 struct Node {
   char sign;
   Node *parent;
@@ -49,8 +50,8 @@ class Tree {
   explicit Tree(std::vector<char> arr) {
     MakeTree(arr);
   }
-  std::vector<char> GetElement(Tree tree, int n) {
-    if (n > permutations.size()) {
+  std::vector<char> GetElement(Tree tree, int m) {
+    if (m > permutations.size()) {
       return {};
     }
     std::vector<char> res;
