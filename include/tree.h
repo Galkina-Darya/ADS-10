@@ -1,6 +1,8 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TREE_H_
 #define INCLUDE_TREE_H_
+#include <vector>
+#include <string>
 struct Node {
   char sign;
   Node *parent;
@@ -35,12 +37,14 @@ class Tree {
     }
   }
   std::vector<char> expectArray(std::vector<char> arr, char value) {
-    std::vector<char>::iterator position = std::find(arr.begin(), arr.end(), value);
+    std::vector<char>::iterator position = std::find(arr.begin(), 
+                                                     arr.end(), value);
     if (position != arr.end()) {
       arr.erase(position);
     }
     return arr;
   }
+  
  publuc:
   explicit Tree(std::vector<char> arr) {
     MakeTree(arr);
