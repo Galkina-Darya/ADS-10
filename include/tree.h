@@ -37,20 +37,20 @@ class Tree {
     }
   }
   std::vector<char> expectArray(std::vector<char> arr, char value) {
-    std::vector<char>::iterator position = std::find(arr.begin(), 
+    std::vector<char>::iterator position = std::find(arr.begin(),
                                                      arr.end(), value);
     if (position != arr.end()) {
       arr.erase(position);
     }
     return arr;
   }
-  
- publuc:
+
+ public:
   explicit Tree(std::vector<char> arr) {
     MakeTree(arr);
   }
   std::vector<char> GetElement(Tree tree, int n) {
-    if (n > purmutations.size()) {
+    if (n > permutations.size()) {
       return {};
     }
     std::vector<char> res;
