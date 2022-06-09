@@ -55,7 +55,7 @@ class Tree {
       return {};
     }
     std::vector<char> res;
-    Node cur = permutations[n - 1];
+    Node cur = permutations[m - 1];
     while (cur.parent) {
       res.push_back(cur.sign);
       cur = *cur.parent;
